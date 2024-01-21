@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="generalstyle.css">
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@v0.153.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@v0.153.0/examples/jsm/"
+        }
+      }
+    </script>
+</head>
+
+<body>
+
+    <div class="cta">
+        <select id="menuSelect" onchange="navigate(this.value);">
+            <option value="home.html">Home</option>
+            <option value="projects.html">View Projects</option>
+            <option value="about.html">About Me</option>
+            <option value="contact.html">Contact</option>
+        </select>
+    </div>
+    
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project">
+            <model-viewer src="assets\Bedroom.gltf" alt="A 3D model of an object" auto-rotate
+                camera-controls></model-viewer>
+            <h3>Project Title</h3>
+            <p>Project Description</p>
+            <a href="project1.html" target="_blank">View Project</a>
+        </div>
+
+        <!-- Repeat the above div for each project -->
+    </section>
+</body>
+<script>
+    window.onload = function () {
+        var path = window.location.pathname;
+        var page = path.split("/").pop();
+        document.getElementById('menuSelect').value = page;
+    };
+    function navigate(url) {
+        if (url !== "") {
+            location = url;
+        }
+    }
+</script>
+
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="generalstyle.css">
+</head>
+
+<body>
+
+    <div class="cta">
+        <select id="menuSelect" onchange="navigate(this.value);">
+            <option value="home.html">Home</option>
+            <option value="projects.html">View Projects</option>
+            <option value="about.html">About Me</option>
+            <option value="contact.html">Contact</option>
+        </select>
+    </div>
+
+
+
+    <div class="section" id="intro">
+        <h1>Introduction</h1>
+        <p>Greetings, I'm Christian Dominique F. Bautista, currently calling Lancaster New City in Barangay Navarro,
+            General Trias, Cavite, my home. I'm presently immersed in my 3rd year pursuing a Bachelor of Science in
+            Computer Science, unraveling the intricate threads of technology.
+
+            My interests lie in the realms of gaming, 3D modeling, and programming, where every challenge sparks a new
+            wave of enthusiasm. Looking ahead, my goal is to graduate, secure a stable job, and continue delving into my
+            passion through advanced education.
+
+            Being a quick learner with a strategic approach to problem-solving, I thrive in diverse environments. I
+            embody the belief that determined effort, combined with adaptability, can overcome any obstacle. In my
+            pursuit of aspirations, I hold onto a guiding principle: "If I desire something, I commit to achieving it,
+            always mindful of ethical boundaries and rules."
+
+            As I carve my path, I stand firm in my commitment to growth and achievement. Here's to embracing challenges,
+            strategically navigating the future, and aligning passion seamlessly with a fulfilling professional journey.
+        </p>
+    </div>
+    <div class="section" id="skills">
+        <h1>Skills</h1>
+        <ul>
+            <li>3D Modeling</li>
+            <li>Programming</li>
+            <li>Animation</li>
+            <!-- Add more skills as needed -->
+        </ul>
+    </div>
+</body>
+<script>
+    window.onload = function () {
+        var path = window.location.pathname;
+        var page = path.split("/").pop();
+        document.getElementById('menuSelect').value = page;
+    };
+    function navigate(url) {
+        if (url !== "") {
+            location = url;
+        }
+    }
+</script>
+
+
+</html>

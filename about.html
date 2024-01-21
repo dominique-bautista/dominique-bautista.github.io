@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="generalstyle.css">
+</head>
+
+<body>
+
+    <div class="cta">
+        <select id="menuSelect" onchange="navigate(this.value);">
+            <option value="home.html">Home</option>
+            <option value="projects.html">View Projects</option>
+            <option value="about.html">About Me</option>
+            <option value="contact.html">Contact</option>
+        </select>
+    </div>
+    <div class="section" id="personalInfo">
+        <h1>Personal Information</h1>
+        <p><strong>Name:</strong> Christian Dominique F. Bautista</p>
+        <p><strong>Education:</strong></p>
+        <ul>
+            <li>
+                <strong>CVSU CCAT</strong> - Bachelor of Science in Computer Science, Cavite State University -
+                CCAT, 2021-2025
+            </li>
+            <li>
+                <strong>Samuel Christian College</strong> - STEM (Science, Technology, Engineering, and Mathematics),
+                2019-2021
+            </li>
+            <li>
+                <strong>Hipolito Saquilayan National High School</strong>, 2017-2019
+            </li>
+            <li>
+                <strong>Lakandula High School</strong>, 2015-2017
+            </li>
+            <li>
+                <strong>Jose Corazon De Jesus Elementary School</strong>, 2011-2015
+            </li>
+            <li>
+                <strong>Jose Rizal Elementary School</strong>, 2009-2011
+            </li>
+        </ul>
+    </div>
+
+    
+
+</body>
+<script>
+    window.onload = function () {
+        var path = window.location.pathname;
+        var page = path.split("/").pop();
+        document.getElementById('menuSelect').value = page;
+    };
+    function navigate(url) {
+        if (url !== "") {
+            location = url;
+        }
+    }
+</script>
+
+
+</html>

@@ -1,0 +1,19 @@
+body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   margin: 0;
+}
+
+.section {
+   max-width: 600px;
+   width: 100%;
+}
+.socialLinksContainer {
+    margin-top: 20px; /* Adjust this value as needed */
+ }
+.icon{
+    width: 2em;
+    height: 2em;
+}

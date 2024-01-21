@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: url('assets/45d0790c293e5dba3077f4ad0c4826c6.gif') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+}
+
+
+.cta {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgb(68, 164, 243);
+    /* Background color */
+}
+
+.cta select {
+    font-size: 2em;
+    /* Increase text size */
+    padding: 10px;
+    /* Add padding */
+    color: black;
+    /* Text color */
+    background-color: rgb(68, 164, 243);
+    /* Background color */
+    border: none;
+    /* Remove default border */
+    cursor: pointer;
+    /* Change cursor to pointer when hovering over the dropdown */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /*background: transparent;*/
+
+}
+
+.cta select option {
+    padding: 10px;
+    /* Add padding to options */
+    color: black;
+    /* Text color */
+    background-color: rgb(68, 164, 243);
+    /* Background color */
+}
+
+p {
+    text-indent: 50px;
+    text-align: justify;
+}
+
+.section {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+#intro,#skills,#personalInfo {
+    background-color: #da9fe950;
+}
+
+
+
+.skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+#contentContainer {
+    position: relative;
+    height: 100vh; /* Adjust this value according to your needs */
+}
+
+
+
+#contentContainer {
+    position: relative;
+    height: 100vh; /* Adjust this value according to your needs */
+}
+
+.btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+
+/* Responsive design for screens smaller than 600px */
+@media screen and (max-width: 600px) {
+    .cta a {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+

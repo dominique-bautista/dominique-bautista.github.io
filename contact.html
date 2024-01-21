@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="generalstyle.css">
+    <link rel="stylesheet" type="text/css" href="form.css">
+
+</head>
+
+<body>
+
+    <div class="cta">
+        <select id="menuSelect" onchange="navigate(this.value);">
+            <option value="home.html">Home</option>
+            <option value="projects.html">View Projects</option>
+            <option value="about.html">About Me</option>
+            <option value="contact.html">Contact</option>
+        </select>
+    </div>
+    <div class="section" id="contactForm">
+        <h1>Contact Me</h1>
+        <div class="formContainer">
+            <form action="/submit_form" method="post">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br>
+                <label for="subject">Subject:</label><br>
+                <input type="text" id="subject" name="subject"><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message"></textarea><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <div class="socialLinksContainer">
+            <div class="socialLinks">
+                <a href="https://www.facebook.com/Project0Reaper/?viewas=100000686899395&show_switched_toast=0&show_invite_to_follow=0&show_switched_tooltip=0&show_podcast_settings=0&show_community_review_changes=0&show_community_rollback=0&show_follower_visibility_disclosure=0"><img class="icon" src="assets\fb.png" alt="Facebook"></a>
+                <a href="https://github.com/yourusername">GitHub</a>
+                <!-- Add more links as needed -->
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+<script>
+    window.onload = function () {
+        var path = window.location.pathname;
+        var page = path.split("/").pop();
+        document.getElementById('menuSelect').value = page;
+    };
+    function navigate(url) {
+        if (url !== "") {
+            location = url;
+        }
+    }
+</script>
+
+
+</html>
