@@ -14,8 +14,8 @@ body {
     margin-top: 20px; /* Adjust this value as needed */
  }
 .icon{
-    width: 4em;
-    height: 4em;
+    width: 3em;
+    height: 3em;
 }
 input{
    max-width: fit-content;
@@ -23,7 +23,7 @@ input{
 }
 
 label{
-   font-size: 2em;
+   font-size: 1.5em;
 }
 
 a{
